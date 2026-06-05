@@ -133,7 +133,7 @@ Before training or evaluation, please download the pretrained weights used for m
 - **ViT backbone weights**: used to initialise the fisheye image feature extraction backbone.
 - **Skeleton voxel heatmap predictor weights**: used to initialise the joint voxel heatmap prediction branch.
 
-[Download model weights](https://drive.google.com/drive/folders/17EOAVadp5JWLRinj-Vw0NsE99yLG1QNP?usp=sharing) and put it under ./pretrained_models/
+[Download model weights](https://drive.google.com/drive/folders/17EOAVadp5JWLRinj-Vw0NsE99yLG1QNP?usp=sharing) and put it under ```bash ./pretrained_models/ ```
 
 ## 5. Training
 给训练命令。
