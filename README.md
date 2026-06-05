@@ -226,7 +226,54 @@ k_limb = 30
 Changing `k_joint` and `k_limb` allows training and evaluating the model under different Top-K settings.
 
 ## 6. Evaluation
-给测试命令，以及如何得到 MPJPE / PA-MPJPE。
+
+Before evaluation, please update the required file paths in the following configuration file: ``` configs/egofullbody/fisheye_vit/heatmap_3d_limb.py ```
+
+Please check and modify the paths around the following lines according to your local environment: ```line 1, line 4, line 30, line 187, line 188 ```
+
+### Select the test dataset
+
+The test dataset should be specified in the `test` field of the configuration file. Please choose **one** of the following settings depending on the dataset to be evaluated.
+
+#### EgoWholeBody test set
+
+To evaluate on the EgoWholeBody test dataset, use the following setting:
+
+```python
+# test on EgoWholeBody test datafile
+test = dict(
+    type='RenderpeopleMixamoTestDataset',
+    ann_file='path/to/EgoWholeMocap/test/render_people_mixamo_test_seq/renderpeople_mixamo_labels_test_seq.pkl',
+    img_prefix='path/to/EgoWholeMocap/test/render_people_mixamo_test_seq',
+    data_cfg=data_cfg,
+    pipeline=test_pipeline,
+    # part_dataset=None,
+)
+```
+
+#### SceneEgo test set
+
+To evaluate on the SceneEgo test dataset, use the following setting:
+
+```python
+# test on SceneEgo test datafile
+test = dict(
+    type='MocapStudioDataset',
+    data_cfg=data_cfg,
+    pipeline=test_pipeline,
+    # part_dataset=None,
+)
+```
+
+### Run evaluation
+
+After selecting the test dataset and updating the corresponding paths, run the following command from the root directory of this repository:
+
+```bash
+bash tools/python_test.sh configs/egofullbody/fisheye_vit/heatmap_3d_limb.py /path/to/epoch.pth --gpu-id 0
+```
+
+This command evaluates the trained model checkpoint and reports the pose estimation results on the selected test dataset.
 
 ## 7. Citation
 给 BibTeX 引用格式。
