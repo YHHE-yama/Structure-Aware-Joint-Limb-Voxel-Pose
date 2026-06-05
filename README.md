@@ -284,7 +284,6 @@ If you find this repository useful for your research, please cite our paper:
   title={Structure-Aware Joint--Limb Voxel Modelling for Egocentric 3D Human Pose Estimation},
   author={He, Yinghao and Leow, Chee Siang and Nishizaki, Hiromitsu},
   journal={The Visual Computer},
-  year={2026},
-  note={Submitted to The Visual Computer}
+  note={Manuscript submitted}
 }
 
