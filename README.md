@@ -75,7 +75,56 @@ pip uninstall open3d-python
 ```
 
 ## 4. Dataset Preparation
-说明 EgoWholeBody / SceneEgo 等数据集如何下载、如何放置、如何预处理。
+
+This project uses the following publicly available egocentric pose estimation datasets.
+
+### EgoWholeBody Training Dataset
+
+The EgoWholeBody training dataset can be downloaded from the official Edmond repository:
+
+https://edmond.mpg.de/dataset.xhtml?persistentId=doi:10.17617/3.SJYBX3
+
+### EgoWholeBody Test Dataset
+
+The EgoWholeBody test dataset can be downloaded from the official Edmond repository:
+
+https://edmond.mpg.de/dataset.xhtml?persistentId=doi:10.17617/3.FSBR5V
+
+### SceneEgo Dataset
+
+The SceneEgo dataset can be downloaded from the official Edmond repository:
+
+https://edmond.mpg.de/dataset.xhtml?persistentId=doi:10.17617/3.VCIHDO
+
+After downloading the datasets, unzip all of the files. please organise them as follows:
+
+```text
+data/
+├── EgoWholeMocap/
+│   ├── train/
+│   │   ├── path_to_dataset_dir
+│   │   │   ├── renderpeople_adanna
+│   │   │   ├── renderpeople_amit
+│   │   │   ├── ......
+│   │   │   ├── renderpeople_mixamo_labels_old.pkl
+│   │   │   └── ......
+│   │   └── ......
+│   └── test/
+│       └──render_people_mixamo_test_seq
+│          ├── render_people_manuel
+│          ├── ......
+│          └── renderpeople_mixamo_labels_test_seq.pkl
+│ 
+└── SceneEgo/
+    ├── train/
+    │   ├── diogo1
+    │   ├── ......
+    │   └── pranay2
+    └── test/
+        ├── diogo1
+        ├── ......
+        └── jian2
+```
 
 ## 5. Pretrained Weights / Checkpoints
 说明是否提供预训练权重。  
