@@ -7,7 +7,7 @@ Existing voxel-based egocentric pose estimation methods can reduce monocular dep
 
 To address this problem, we propose a structure-aware voxel framework that jointly models discrete body joints and continuous limb segments. The method introduces an auxiliary limb voxel branch for bone-level structural supervision, and further uses sparse Top-K voxel tokenisation with CrossTGFI3D to efficiently fuse joint and limb information under topology and geometry constraints.
 
-<img src="assets/fig1.pdf" width="700">
+<img src="assets/fig1.png" width="700">
 
 ## 2. Key Algorithms
 介绍论文提出的核心方法，例如：
