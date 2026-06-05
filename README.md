@@ -29,6 +29,11 @@ Directly modelling interactions over the full 3D voxel grid is computationally e
 
 CrossTGFI3D performs cross-branch attention between joint tokens and limb tokens. It uses a geometry-aware distance bias to encourage interactions between spatially close regions and a topology-guided mask to restrict attention to anatomically valid joint--limb connections. The enhanced joint tokens are then written back to the joint heatmaps for final 3D pose prediction.
 
+<p align="center">
+  <img src="assets/fig3.png" width="500">
+</p>
+
+
 ## 3. Repository Structure
 说明每个文件夹是做什么的。
 
