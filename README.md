@@ -57,10 +57,6 @@ conda activate joint_limb_pose
 
 Install the PyTorch version that matches your CUDA environment. For example, the experiments in this project were conducted with PyTorch 1.10.1 and CUDA 11.1.
 
-```bash
-conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
-```
-
 ### Install MMCV and MMPose-related dependencies
 
 ```bash
