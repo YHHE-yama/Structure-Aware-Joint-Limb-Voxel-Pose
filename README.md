@@ -44,11 +44,35 @@ CrossTGFI3D performs cross-branch attention between joint tokens and limb tokens
 ```bash
 conda create -n joint_limb_pose python=3.9 -y
 conda activate joint_limb_pose
+```
 
 ### Install PyTorch
 
 Install the PyTorch version that matches your CUDA environment. For example, the experiments in this project were conducted with PyTorch 1.10.1 and CUDA 11.1.
 
+```bash
+conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
+```
+
+### Install MMCV and MMPose-related dependencies
+
+```bash
+pip install openmim
+mim install mmcv-full==1.7.1
+pip install -e .
+```
+
+### Install additional dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+If smplx installed open3d-python, you should uninstall it by running:
+
+```bash
+pip uninstall open3d-python
+```
 
 ## 4. Dataset Preparation
 说明 EgoWholeBody / SceneEgo 等数据集如何下载、如何放置、如何预处理。
