@@ -276,8 +276,16 @@ bash tools/python_test.sh configs/egofullbody/fisheye_vit/heatmap_3d_limb.py /pa
 This command evaluates the trained model checkpoint and reports the pose estimation results on the selected test dataset.
 
 ## 7. Citation
-给 BibTeX 引用格式。
+## Citation
 
-## 8. Acknowledgements
-感谢 EgoWholeBody、SceneEgo、MMPose、相关开源代码等。
+If you find this repository useful for your research, please cite our paper:
+
+```bibtex
+@article{he2026structure,
+  title={Structure-Aware Joint--Limb Voxel Modelling for Egocentric 3D Human Pose Estimation},
+  author={He, Yinghao and Leow, Chee Siang and Nishizaki, Hiromitsu},
+  journal={The Visual Computer},
+  year={2026},
+  note={Submitted to The Visual Computer}
+}
 
