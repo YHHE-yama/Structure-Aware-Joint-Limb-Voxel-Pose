@@ -126,7 +126,10 @@ data/
         └── jian2
 ```
 
-## 5. Pretrained Weights / Checkpoints
+### Pretrained Weights
+
+[Download model weights](https://drive.google.com/drive/folders/17EOAVadp5JWLRinj-Vw0NsE99yLG1QNP?usp=sharing)
+
 说明是否提供预训练权重。  
 如果不给，可以写：
 `Trained model weights are not included at this stage.`
