@@ -10,12 +10,17 @@ To address this problem, we propose a structure-aware voxel framework that joint
 <img src="assets/fig1.png" width="700">
 
 ## 2. Key Algorithms
-介绍论文提出的核心方法，例如：
-- Joint--Limb dual-branch voxel modelling
-- Limb heatmap supervision
-- Top-K voxel tokenisation
-- CrossTGFI3D
-- Selective gated replacement / structure-aware fusion
+### Joint--Limb Dual-Branch Voxel Modelling
+
+The framework predicts both joint voxel heatmaps and limb voxel heatmaps. The joint branch localises discrete body keypoints, while the auxiliary limb branch models continuous limb segments in 3D space. This design provides bone-level structural supervision and helps the network preserve anatomically consistent poses.
+
+### Sparse Top-K Voxel Tokenisation
+
+Directly modelling interactions over the full 3D voxel grid is computationally expensive. To address this, the method selects only the Top-K highest-response voxels from each joint and limb heatmap. These selected voxels are converted into compact tokens using their response values and 3D coordinates, enabling efficient structural reasoning over informative regions.
+
+### CrossTGFI3D: Geometry-aware Joint--Limb Fusion
+
+CrossTGFI3D performs cross-branch attention between joint tokens and limb tokens. It uses a geometry-aware distance bias to encourage interactions between spatially close regions and a topology-guided mask to restrict attention to anatomically valid joint--limb connections. The enhanced joint tokens are then written back to the joint heatmaps for final 3D pose prediction.
 
 ## 3. Repository Structure
 说明每个文件夹是做什么的。
