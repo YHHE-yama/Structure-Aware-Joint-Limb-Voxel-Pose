@@ -33,33 +33,29 @@ CrossTGFI3D performs cross-branch attention between joint tokens and limb tokens
   <img src="assets/fig3.png" width="500">
 </p>
 
-
-## 3. Repository Structure
-说明每个文件夹是做什么的。
-
-## 4. Requirements / Dependencies
+## 3. Requirements / Dependencies
 说明 Python、PyTorch、CUDA、MMCV、MMPose 等环境版本。
 
-## 5. Installation
+## 4. Installation
 说明 conda 环境创建、依赖安装、编译安装等。
 
-## 6. Dataset Preparation
+## 5. Dataset Preparation
 说明 EgoWholeBody / SceneEgo 等数据集如何下载、如何放置、如何预处理。
 
-## 7. Pretrained Weights / Checkpoints
+## 6. Pretrained Weights / Checkpoints
 说明是否提供预训练权重。  
 如果不给，可以写：
 `Trained model weights are not included at this stage.`
 
-## 8. Training
+## 7. Training
 给训练命令。
 
-## 9. Evaluation
+## 8. Evaluation
 给测试命令，以及如何得到 MPJPE / PA-MPJPE。
 
-## 10. Citation
+## 9. Citation
 给 BibTeX 引用格式。
 
-## 11. Acknowledgements
+## 10. Acknowledgements
 感谢 EgoWholeBody、SceneEgo、MMPose、相关开源代码等。
 
