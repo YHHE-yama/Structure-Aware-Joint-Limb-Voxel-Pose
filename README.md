@@ -128,21 +128,22 @@ data/
 
 ### Pretrained Weights
 
-[Download model weights](https://drive.google.com/drive/folders/17EOAVadp5JWLRinj-Vw0NsE99yLG1QNP?usp=sharing)
+Before training or evaluation, please download the pretrained weights used for model initialisation. This project uses two pretrained weight files: the ViT backbone weights and the skeleton voxel heatmap predictor weights.
 
-说明是否提供预训练权重。  
-如果不给，可以写：
-`Trained model weights are not included at this stage.`
+- **ViT backbone weights**: used to initialise the fisheye image feature extraction backbone.
+- **Skeleton voxel heatmap predictor weights**: used to initialise the joint voxel heatmap prediction branch.
 
-## 6. Training
+[Download model weights](https://drive.google.com/drive/folders/17EOAVadp5JWLRinj-Vw0NsE99yLG1QNP?usp=sharing) and put it under ./pretrained_models/
+
+## 5. Training
 给训练命令。
 
-## 7. Evaluation
+## 6. Evaluation
 给测试命令，以及如何得到 MPJPE / PA-MPJPE。
 
-## 8. Citation
+## 7. Citation
 给 BibTeX 引用格式。
 
-## 9. Acknowledgements
+## 8. Acknowledgements
 感谢 EgoWholeBody、SceneEgo、MMPose、相关开源代码等。
 
