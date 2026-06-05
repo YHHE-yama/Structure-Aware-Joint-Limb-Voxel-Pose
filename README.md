@@ -12,7 +12,7 @@ To address this problem, we propose a structure-aware voxel framework that joint
 
 ## 2. Key Algorithms
 
-### Joint--Limb Dual-Branch Voxel Modelling
+### Joint--Limb Voxel Modelling
 
 The framework predicts both joint voxel heatmaps and limb voxel heatmaps. The joint branch localises discrete body keypoints, while the auxiliary limb branch models continuous limb segments in 3D space. This design provides bone-level structural supervision and helps the network preserve anatomically consistent poses.
 
@@ -34,6 +34,11 @@ CrossTGFI3D performs cross-branch attention between joint tokens and limb tokens
 <p align="center">
   <img src="assets/fig3.png" width="500">
 </p>
+
+The implementations of the above three components can be found in:
+
+```text
+mmpose/models/egocentric/feature_mix_only_end2_limb_heatmap_3d_net_topk_crossattention_v2.py
 
 ## 3. Installation
 
