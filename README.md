@@ -291,6 +291,14 @@ If you find this repository useful for your research, please cite our paper:
   title={Structure-Aware Joint-Limb Voxel Modelling for Egocentric 3D Human Pose Estimation},
   author={He, Yinghao and Leow, Chee Siang and Nishizaki, Hiromitsu},
   journal={The Visual Computer},
+  year={2026},
   note={Manuscript submitted}
 }
+```
+
+## 8.Data Availability
+
+This study uses publicly available datasets. We do not redistribute the original dataset files in this repository. Users should download the datasets from the official links listed below and follow the corresponding dataset licences.
+
+The proposed limb heatmap labels are generated automatically from the original 3D joint annotations during data loading, and therefore no additional manual annotations are required.
 
