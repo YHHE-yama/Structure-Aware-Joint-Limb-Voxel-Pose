@@ -154,7 +154,7 @@ Before training or evaluation, please download the pretrained weights used for m
 
 ## 5. Training
 
-### Train the pose estimation model on EgoWholeBody Training Dataset
+### 1.Train the pose estimation model on EgoWholeBody Training Dataset
 
 
 Before training, please update the required file paths in the following configuration file: ```configs/egofullbody/fisheye_vit/heatmap_3d_limb.py```
@@ -172,7 +172,7 @@ type='TopKCrossattenyionHeatmap3DNet_v2'
 Run the following command from the root directory of this repository:
 
 ```bash
-bash tools/python_train.sh configs/egofullbody/fisheye_vit/heatmap_3d_limb.py --gpu-id 1 --seed 2088999277
+bash tools/python_train.sh configs/egofullbody/fisheye_vit/heatmap_3d_limb.py --gpu-id 1 
 ```
 
 #### Multi-GPU training
@@ -180,7 +180,38 @@ bash tools/python_train.sh configs/egofullbody/fisheye_vit/heatmap_3d_limb.py --
 For multi-GPU training, use `tools/dist_train.sh`. The following example uses 2 GPUs:
 
 ```bash
-bash tools/dist_train.sh configs/egofullbody/fisheye_vit/heatmap_3d_limb.py 2 --seed 2088999277
+bash tools/dist_train.sh configs/egofullbody/fisheye_vit/heatmap_3d_limb.py 2 
+```
+
+#### Note
+
+The number of selected Top-K voxels can be adjusted in the configuration file by modifying:
+
+```python
+k_joint = 30
+k_limb = 30
+```
+
+Changing `k_joint` and `k_limb` allows training and evaluating the model under different Top-K settings.
+
+### 2.Train the pose estimation model on SceneEgo Dataset
+
+Before training, please update the required file paths in the following configuration file: ```configs/egofullbody/fisheye_vit/heatmap_3d_finetune_limb.py```
+
+Please check and modify the paths around the following lines according to your local environment:```line 1, line 3, line 25, line 34, line 35, line 56 ```
+
+Then, make sure that the `keypoint_head` is set to:
+
+```python
+type='TopKCrossattenyionHeatmap3DNet_v2'
+```
+
+#### Single-GPU training
+
+Run the following command from the root directory of this repository:
+
+```bash
+bash tools/python_train.sh configs/egofullbody/fisheye_vit/heatmap_3d_finetune_limb.py --gpu-id 0 
 ```
 
 #### Note
