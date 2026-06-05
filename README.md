@@ -9,7 +9,9 @@ To address this problem, we propose a structure-aware voxel framework that joint
 <p align="center">
   <img src="assets/fig1.png" width="700">
 </p>
+
 ## 2. Key Algorithms
+
 ### Joint--Limb Dual-Branch Voxel Modelling
 
 The framework predicts both joint voxel heatmaps and limb voxel heatmaps. The joint branch localises discrete body keypoints, while the auxiliary limb branch models continuous limb segments in 3D space. This design provides bone-level structural supervision and helps the network preserve anatomically consistent poses.
