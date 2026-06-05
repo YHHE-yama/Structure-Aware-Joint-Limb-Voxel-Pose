@@ -36,7 +36,19 @@ CrossTGFI3D performs cross-branch attention between joint tokens and limb tokens
 </p>
 
 ## 3. Installation
-说明 conda 环境创建、依赖安装、编译安装等。
+
+ We recommend creating an isolated conda environment before installing the required packages.
+
+### Create a conda environment
+
+```bash
+conda create -n joint_limb_pose python=3.9 -y
+conda activate joint_limb_pose
+
+### Install PyTorch
+
+Install the PyTorch version that matches your CUDA environment. For example, the experiments in this project were conducted with PyTorch 1.10.1 and CUDA 11.1.
+
 
 ## 4. Dataset Preparation
 说明 EgoWholeBody / SceneEgo 等数据集如何下载、如何放置、如何预处理。
