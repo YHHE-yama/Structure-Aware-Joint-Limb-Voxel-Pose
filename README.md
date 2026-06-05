@@ -39,6 +39,7 @@ The implementations of the above three components can be found in:
 
 ```text
 mmpose/models/egocentric/feature_mix_only_end2_limb_heatmap_3d_net_topk_crossattention_v2.py
+```
 
 ## 3. Installation
 
