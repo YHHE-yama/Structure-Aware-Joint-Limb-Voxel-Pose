@@ -6,9 +6,9 @@ This repository provides the implementation of **Structure-Aware Joint--Limb Vox
 Existing voxel-based egocentric pose estimation methods can reduce monocular depth ambiguity, but they usually predict joint voxel heatmaps independently and lack explicit modelling of joint--limb structural dependencies in 3D space. Directly modelling such interactions over dense voxel grids is also computationally expensive.
 
 To address this problem, we propose a structure-aware voxel framework that jointly models discrete body joints and continuous limb segments. The method introduces an auxiliary limb voxel branch for bone-level structural supervision, and further uses sparse Top-K voxel tokenisation with CrossTGFI3D to efficiently fuse joint and limb information under topology and geometry constraints.
-
-<img src="assets/fig1.png" width="700">
-
+<p align="center">
+  <img src="assets/fig1.png" width="700">
+</p>
 ## 2. Key Algorithms
 ### Joint--Limb Dual-Branch Voxel Modelling
 
@@ -18,11 +18,11 @@ The framework predicts both joint voxel heatmaps and limb voxel heatmaps. The jo
 
 Directly modelling interactions over the full 3D voxel grid is computationally expensive. To address this, the method selects only the Top-K highest-response voxels from each joint and limb heatmap. These selected voxels are converted into compact tokens using their response values and 3D coordinates, enabling efficient structural reasoning over informative regions.
 <p align="center">
-  <img src="assets/fig2.png" width="700">
+  <img src="assets/fig2.png" width="500">
 </p>
 
 <p align="center">
-  <img src="assets/fig4.png" width="700">
+  <img src="assets/fig4.png" width="500">
 </p>
 
 ### CrossTGFI3D: Geometry-aware Joint--Limb Fusion
