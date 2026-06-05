@@ -276,7 +276,6 @@ bash tools/python_test.sh configs/egofullbody/fisheye_vit/heatmap_3d_limb.py /pa
 This command evaluates the trained model checkpoint and reports the pose estimation results on the selected test dataset.
 
 ## 7. Citation
-## Citation
 
 If you find this repository useful for your research, please cite our paper:
 
