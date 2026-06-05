@@ -102,7 +102,7 @@ After downloading the datasets, unzip all of the files. please organise them as 
 data/
 ├── EgoWholeMocap/
 │   ├── train/
-│   │   ├── path_to_dataset_dir
+│   │   ├── path to dataset_dir
 │   │   │   ├── renderpeople_adanna
 │   │   │   ├── renderpeople_amit
 │   │   │   ├── ......
@@ -155,7 +155,44 @@ Before training or evaluation, please download the pretrained weights used for m
 ## 5. Training
 
 ### Train the pose estimation model on EgoWholeBody Training Dataset
-由于公开数据
+
+
+Before training, please update the required file paths in the following configuration file: ```configs/egofullbody/fisheye_vit/heatmap_3d_limb.py```
+
+Please check and modify the paths around the following lines according to your local environment:```line 1, line 3, line 22, line 31, line 33, line 54, line 177, line 178```
+
+Then, make sure that the `keypoint_head` is set to:
+
+```python
+type='TopKCrossattenyionHeatmap3DNet_v2'
+```
+
+#### Single-GPU training
+
+Run the following command from the root directory of this repository:
+
+```bash
+bash tools/python_train.sh configs/egofullbody/fisheye_vit/heatmap_3d_limb.py --gpu-id 1 --seed 2088999277
+```
+
+#### Multi-GPU training
+
+For multi-GPU training, use `tools/dist_train.sh`. The following example uses 2 GPUs:
+
+```bash
+bash tools/dist_train.sh configs/egofullbody/fisheye_vit/heatmap_3d_limb.py 2 --seed 2088999277
+```
+
+#### Note
+
+The number of selected Top-K voxels can be adjusted in the configuration file by modifying:
+
+```python
+k_joint = 30
+k_limb = 30
+```
+
+Changing `k_joint` and `k_limb` allows training and evaluating the model under different Top-K settings.
 
 ## 6. Evaluation
 给测试命令，以及如何得到 MPJPE / PA-MPJPE。
