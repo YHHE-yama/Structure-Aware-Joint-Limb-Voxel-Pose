@@ -17,6 +17,13 @@ The framework predicts both joint voxel heatmaps and limb voxel heatmaps. The jo
 ### Sparse Top-K Voxel Tokenisation
 
 Directly modelling interactions over the full 3D voxel grid is computationally expensive. To address this, the method selects only the Top-K highest-response voxels from each joint and limb heatmap. These selected voxels are converted into compact tokens using their response values and 3D coordinates, enabling efficient structural reasoning over informative regions.
+<p align="center">
+  <img src="assets/fig2.png" width="700">
+</p>
+
+<p align="center">
+  <img src="assets/fig4.png" width="700">
+</p>
 
 ### CrossTGFI3D: Geometry-aware Joint--Limb Fusion
 
