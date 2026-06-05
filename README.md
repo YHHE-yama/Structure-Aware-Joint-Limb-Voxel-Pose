@@ -125,6 +125,14 @@ data/
         ├── ......
         └── jian2
 ```
+
+After downloading and organising the datasets, please update the dataset paths in the corresponding files under `mmpose/datasets/datasets/egocentric/`.
+
+For SceneEgo, please modify the dataset paths in the following files:
+
+- SceneEgo training set: `mocap_studio_finetune_dataset_limb.py`
+- SceneEgo test set: `mocap_studio_dataset.py`, `mocap_studio_dataset_limb.py`
+
 ### Ground-Truth Limb Heatmap Generation
 
 The proposed joint--limb dual-branch model requires ground-truth limb voxel heatmaps for training. However, public egocentric datasets such as EgoWholeBody and SceneEgo only provide 3D joint annotations and do not include limb heatmap labels.
