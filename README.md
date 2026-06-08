@@ -1,5 +1,6 @@
 
 # Structure-Aware Joint-Limb Voxel Modelling for Egocentric 3D Human Pose Estimation
+[![DOI](https://doi.org/10.5281/zenodo.20588347)
 
 ## 1. Overview
 This repository provides the implementation of **Structure-Aware Joint-Limb Voxel Modelling for Egocentric 3D Human Pose Estimation**.
