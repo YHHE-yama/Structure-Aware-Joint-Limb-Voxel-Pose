@@ -9,7 +9,7 @@ Existing voxel-based egocentric pose estimation methods can reduce monocular dep
 
 To address this problem, we propose a structure-aware voxel framework that jointly models discrete body joints and continuous limb segments. The method introduces an auxiliary limb voxel branch for bone-level structural supervision, and further uses sparse Top-K voxel tokenisation with CrossTGFI3D to efficiently fuse joint and limb information under topology and geometry constraints.
 <p align="center">
-  <img src="assets/fig1.png" width="700">
+  <img src="./assets/fig1.png" width="700">
 </p>
 
 ## 2. Key Algorithms
@@ -22,11 +22,11 @@ The framework predicts both joint voxel heatmaps and limb voxel heatmaps. The jo
 
 Directly modelling interactions over the full 3D voxel grid is computationally expensive. To address this, the method selects only the Top-K highest-response voxels from each joint and limb heatmap. These selected voxels are converted into compact tokens using their response values and 3D coordinates, enabling efficient structural reasoning over informative regions.
 <p align="center">
-  <img src="assets/fig2.png" width="500">
+  <img src="./assets/fig2.png" width="500">
 </p>
 
 <p align="center">
-  <img src="assets/fig4.png" width="500">
+  <img src="./assets/fig4.png" width="500">
 </p>
 
 ### CrossTGFI3D: Geometry-aware Joint--Limb Fusion
@@ -34,7 +34,7 @@ Directly modelling interactions over the full 3D voxel grid is computationally e
 CrossTGFI3D performs cross-branch attention between joint tokens and limb tokens. It uses a geometry-aware distance bias to encourage interactions between spatially close regions and a topology-guided mask to restrict attention to anatomically valid joint--limb connections. The enhanced joint tokens are then written back to the joint heatmaps for final 3D pose prediction.
 
 <p align="center">
-  <img src="assets/fig3.png" width="500">
+  <img src="./assets/fig3.png" width="500">
 </p>
 
 The implementations of the above three components can be found in:
